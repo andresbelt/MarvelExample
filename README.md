@@ -15,7 +15,7 @@ git clone https://github.com/andresbelt/MarvelExample.git
 
 ## Maintainers
 
-* **Andres Beltran** - [ExampleZemoga](https://github.com/andresbelt/ExampleZemoga).
+* **Andres Beltran** - [MarvelExample](https://github.com/andresbelt/MarvelExample).
 
 ## License
 
