@@ -5,6 +5,11 @@ Example android with MVVM and Retrofit with Room, architecture repository with c
 
 ![MVVM3](https://github.com/andresbelt/ExampleZemoga/blob/master/diagram.png)
 
+## Art
+
+![FirstScreen](https://github.com/andresbelt/MarvelExample/blob/master/art/device-2020-09-11-012646.png)
+
+
 
 ## Installation
 Clone this repository and import into **Android Studio**
