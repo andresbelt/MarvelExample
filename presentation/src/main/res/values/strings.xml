@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">grability</string>
+    <string name="username_email">Email</string>
+    <string name="olvide_contraseña">Olvide mi contraseña</string>
+    <string name="password">Contraseña</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="noempty">Verifique los datos</string>
+    <string name="marvel">MARVEL</string>
+
+</resources>

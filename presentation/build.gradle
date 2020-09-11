@@ -1,0 +1,111 @@
+apply plugin: (Plugins.androidApplication)
+apply plugin: (Plugins.kotlinAndroid)
+apply plugin: (Plugins.kotlinAndroidExtensions)
+apply plugin: (Plugins.kotlinKapt)
+apply plugin: (Plugins.safeArgsk)
+
+
+android {
+    compileSdkVersion(AndroidSdk.compile)
+
+    defaultConfig {
+        applicationId = "com.test.grability"
+        minSdkVersion(AndroidSdk.min)
+        targetSdkVersion(AndroidSdk.target)
+        versionCode = 1
+        versionName = "1.0"
+        vectorDrawables.useSupportLibrary true
+        multiDexEnabled true
+        testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildFeatures {
+
+        dataBinding true
+        viewBinding true
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+        test.java.srcDirs += 'src/test/kotlin'
+        androidTest.java.srcDirs += 'src/androidTest/kotlin'
+    }
+
+
+
+}
+
+
+dependencies {
+
+    implementation project(Modules.data)
+    implementation project(Modules.domain)
+
+
+    implementation AndroidXLibraries.appcompat
+    implementation AndroidXLibraries.navigation_fragment_ktx
+    implementation AndroidXLibraries.navigation_ktx
+
+
+    implementation Libraries.glide
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    kapt Libraries.glideCompiler
+
+    implementation Libraries.lifecycleExtensions
+    kapt Libraries.lifecycleCompiler
+
+    api Libraries.materialAndroid
+    api Libraries.daggerAndroid
+    api Libraries.daggerAndroidSupport
+    kapt Libraries.daggerAndroidProcessor
+    kapt Libraries.daggerCompiler
+
+
+    api AndroidXLibraries.design
+    api AndroidXLibraries.cardview
+    api AndroidXLibraries.recyclerview
+    api Libraries.materialAndroid
+
+    api AndroidXLibraries.navigation
+    api AndroidXLibraries.navigation_fragment
+    api AndroidXLibraries.constraintLayout
+
+
+    testImplementation TestLibraries.junit
+    testImplementation TestLibraries.lifecycleTesting
+    testImplementation TestLibraries.coroutine
+    testImplementation TestLibraries.mockito
+
+    androidTestImplementation TestLibraries.espresso_runner
+    androidTestImplementation TestLibraries.espresso
+    androidTestImplementation TestLibraries.espresso_runner
+    androidTestImplementation TestLibraries.espresso
+
+
+}

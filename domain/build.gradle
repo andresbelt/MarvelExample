@@ -1,0 +1,21 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: (Plugins.kotlinAndroidExtensions)
+apply plugin: (Plugins.kotlinKapt)
+
+android {
+    compileSdkVersion(AndroidSdk.compile)
+
+}
+
+dependencies {
+    implementation fileTree (dir: "libs", include: ["*.jar"])
+    api Libraries.dagger
+    kapt Libraries.daggerCompiler
+
+    api Libraries.daggerAndroid
+    api Libraries.daggerAndroidSupport
+    kapt Libraries.daggerAndroidProcessor
+    api Libraries.paging
+
+}
