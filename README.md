@@ -7,7 +7,7 @@ Example android with MVVM and Retrofit with Room, architecture repository with c
 
 ## Art
 
-![FirstScreen](https://github.com/andresbelt/MarvelExample/blob/master/art/device-2020-09-11-012646.png)
+![FirstScreen](https://github.com/andresbelt/MarvelExample/blob/master/art/device-2020-09-11-012714.png)
 
 
 
