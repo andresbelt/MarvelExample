@@ -1,5 +1,5 @@
 # MarvelExample
-Example android with MVVM and Retrofit with Room, architecture repository with cache
+Example android with MVVM and Retrofit with Room, architecture repository with cache, consume Marvel's Rest API, Characters
 
 ## Architecture
 
